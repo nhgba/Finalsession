@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to your Dashboard, <%= currentUser.username %>!</h1>
+        <% if (success && success.length > 0) { %>
+            <div class="message success">
+                <%= success %>
+            </div>
+        <% } %>
+        <p>This is a protected page, only accessible after successful login.</p>
+        <div class="dashboard-actions">
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+</body>
+</html>
